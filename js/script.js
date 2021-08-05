@@ -28,9 +28,8 @@ function showPage(list, page) {
   // loop over the length of the `list` parameter
   for (i = 0; i < list.length; i++) {
     // inside the loop create a conditional to display the proper students
-    if (i >= startIndex && i <= endIndex) { //might need to change condditonal to i <= startIndex && i >= endIndex
-      const studentItem = document.createElement('li');
-      studentItem.innerHTML = ` <li class="student-item cf">
+    if (i >= startIndex && i <= endIndex) { 
+      let studentItem = ` <li class="student-item cf">
       <div class="student-details">
         <img class="avatar" src="${list[i].picture.large}" alt="Profile Picture">
         <h3>${list[i].name.first} ${list[i].name.last}</h3>
@@ -40,8 +39,7 @@ function showPage(list, page) {
         <span class="date">${list[i].registered.date}</span>
       </div>
     </li>`;
-      studentList.appendChild(studentItem);
-      //studentList.insertAdjacentHTML('beforeend', studentItem);
+      studentList.insertAdjacentHTML('beforeend', studentItem);
     }
       // inside the conditional:
         // create the elements needed to display the student information
@@ -56,6 +54,8 @@ showPage(data, 1);
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
+
+
 
 
 
