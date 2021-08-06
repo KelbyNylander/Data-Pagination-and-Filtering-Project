@@ -54,10 +54,11 @@ function addPagination(list) {
    document.querySelector('button').className = 'active';
    console.log(linkList);
    linkList.addEventListener('click', (e) => {
-      if (e.target.tagName === 'BUTTON')
+      if (e.target.tagName === 'BUTTON') {
          document.querySelector('.active').className = '';
          e.target.className = 'active'
          showPage(data, [e.target.textContent])
+      }
     });
 }
 showPage(data, 1);
